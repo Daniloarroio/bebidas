@@ -1,0 +1,15 @@
+@import url('cadastro.css');
+
+.signup-link {
+  margin: 18px 0 0;
+  color: #777;
+  text-align: center;
+  font-size: 12px;
+}
+
+.signup-link a {
+  color: #704b32;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

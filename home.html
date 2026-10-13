@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#70472f">
+  <title>Cardápio | Casa de Madeira</title>
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">Casa de Madeira</a>
+    <nav class="topbar-links" aria-label="Navegação principal">
+      <a class="login-link" href="bebidas.html">Cadastrar bebida</a>
+      <a class="login-link" href="login.html" id="logout-link">Sair</a>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="intro">
+      <p class="eyebrow">ESCOLHA SUA BEBIDA</p>
+      <h1>Nosso cardápio</h1>
+      <p>Veja os ingredientes, escolha a quantidade e faça seu pedido.</p>
+    </section>
+
+    <section class="order-summary" id="order-summary" aria-live="polite" hidden>
+      <div class="summary-heading">
+        <div>
+          <p class="eyebrow">SEU PEDIDO</p>
+          <h2><span id="order-count">0</span> bebida(s)</h2>
+        </div>
+        <strong id="order-total">R$ 0,00</strong>
+      </div>
+      <ul id="order-items"></ul>
+    </section>
+
+    <section class="drink-grid" id="drink-grid" aria-label="Bebidas cadastradas"></section>
+    <p class="notice" id="empty-menu" hidden>Nenhuma bebida cadastrada ainda.</p>
+    <p class="notice" id="menu-error" hidden>Não foi possível carregar o cardápio. Tente novamente.</p>
+  </main>
+</body>
+</html>

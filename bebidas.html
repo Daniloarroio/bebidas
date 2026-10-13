@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#70472f">
+  <title>Cadastrar bebida | Casa de Madeira</title>
+  <link rel="stylesheet" href="css/bebidas.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/bebidas.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="home.html">Casa de Madeira</a>
+    <a class="back-link" href="home.html">Voltar ao cardápio</a>
+  </header>
+
+  <main class="page-content">
+    <section class="form-card" aria-labelledby="page-title">
+      <p class="eyebrow">CARDÁPIO</p>
+      <h1 id="page-title">Cadastrar bebida</h1>
+      <p class="subtitle">Preencha os dados da bebida.</p>
+
+      <form id="drink-form" novalidate>
+        <div class="field">
+          <label for="drink-name">Nome da bebida</label>
+          <input id="drink-name" name="name" type="text" required maxlength="80" placeholder="Ex.: Limonada natural" aria-describedby="name-error">
+          <small class="field-error" id="name-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="drink-ingredients">Ingredientes</label>
+          <textarea id="drink-ingredients" name="ingredients" rows="3" required maxlength="250" placeholder="Ex.: limão, água e açúcar" aria-describedby="ingredients-error"></textarea>
+          <small class="field-error" id="ingredients-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="drink-price">Preço (R$)</label>
+          <input id="drink-price" name="price" type="number" min="0.01" step="0.01" required placeholder="Ex.: 8,00" aria-describedby="price-error">
+          <small class="field-error" id="price-error"></small>
+        </div>
+
+        <button class="submit-button" type="submit">Cadastrar bebida</button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="registered-section" aria-labelledby="registered-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NESTA TELA</p>
+          <h2 id="registered-title">Bebidas cadastradas</h2>
+        </div>
+        <span class="item-count" id="item-count">0</span>
+      </div>
+      <p class="empty-message" id="empty-message">Carregando bebidas cadastradas...</p>
+      <ul class="drink-list" id="drink-list"></ul>
+    </section>
+  </main>
+</body>
+</html>

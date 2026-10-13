@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#70472f">
+  <title>Criar conta | Casa de Madeira</title>
+  <link rel="stylesheet" href="css/cadastro.css">
+  <script src="js/api.js" defer></script>
+  <script src="js/cadastro.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <section class="signup-card" aria-labelledby="page-title">
+      <p class="brand">Casa de Madeira</p>
+
+      <div class="intro">
+        <p class="eyebrow">BOM TER VOCÊ AQUI</p>
+        <h1 id="page-title">Crie sua conta</h1>
+        <p class="subtitle">Preencha seus dados para continuar.</p>
+      </div>
+
+      <form id="signup-form" novalidate>
+        <div class="field">
+          <label for="name">Nome completo</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Como podemos chamar você?" required minlength="2" maxlength="100" aria-describedby="name-error">
+          <small class="field-error" id="name-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required maxlength="150" aria-describedby="email-error">
+          <small class="field-error" id="email-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Senha</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Pelo menos 8 caracteres" required minlength="8" aria-describedby="password-hint password-error">
+            <button class="show-password" type="button" data-toggle-password="password" aria-label="Mostrar senha">Mostrar</button>
+          </div>
+          <small class="field-hint" id="password-hint">Use pelo menos 8 caracteres.</small>
+          <small class="field-error" id="password-error"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirm-password">Confirmar senha</label>
+          <div class="password-wrap">
+            <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" placeholder="Digite a senha novamente" required aria-describedby="confirm-error">
+            <button class="show-password" type="button" data-toggle-password="confirm-password" aria-label="Mostrar confirmação da senha">Mostrar</button>
+          </div>
+          <small class="field-error" id="confirm-error"></small>
+        </div>
+
+        <button class="submit-button" type="submit">Confirmar cadastro <span aria-hidden="true">→</span></button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="privacy-note"><span aria-hidden="true">◇</span> Sua senha será protegida no cadastro.</p>
+    </section>
+  </main>
+</body>
+</html>
