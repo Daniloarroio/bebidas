@@ -98,7 +98,7 @@ form.addEventListener('submit', async (event) => {
       message.className = 'form-message is-visible is-error';
       return;
     }
-    window.location.href = 'login.html?cadastro=ok';
+    window.location.href = 'index.html?cadastro=ok';
   } catch {
     message.textContent = 'Não foi possível conectar ao servidor. Tente novamente.';
     message.className = 'form-message is-visible is-error';

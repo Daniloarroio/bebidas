@@ -67,7 +67,7 @@ async function loadDrinks() {
   try {
     const result = await window.appApi.request('/api/bebidas');
     if (result.status === 401) {
-      window.location.href = 'login.html';
+      window.location.href = 'index.html';
       return;
     }
     if (!result.ok) throw new Error('Erro ao carregar bebidas.');

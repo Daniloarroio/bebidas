@@ -110,7 +110,7 @@ document.querySelector('#logout-link').addEventListener('click', async (event) =
   try {
     await window.appApi.request('/api/auth/logout', { method: 'POST' });
   } finally {
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   }
 });
 
